@@ -1,4 +1,2 @@
 build:
   web: Dockerfile
-# run: 
-#   web: 
