@@ -2,5 +2,6 @@ FROM nginx:latest
 RUN rm -f /etc/nginx/conf.d/*
 
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY 403.html /var/www/dummy/403.html
 
-CMD sed -i -e 's/$PORT/'"$PORT"'/g' /etc/nginx/nginx.conf && nginx -g 'daemon off;'
+CMD ["/usr/sbin/nginx", "-g", "daemon off;"] 
